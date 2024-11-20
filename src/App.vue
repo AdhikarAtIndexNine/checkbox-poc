@@ -19,8 +19,8 @@ import { AgGridVue } from "ag-grid-vue3";
   </main> -->
 
   <div>
-    <HelloWorld/>
-    <!-- <TheWelcome /> -->
+    <!-- <HelloWorld/> -->
+    <TheWelcome />
   </div>
 </template>
 
