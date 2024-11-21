@@ -42,7 +42,19 @@ export default {
       { field: "athlete" },
       { field: "sport" },
       { field: "year", maxWidth: 120 },
+      {
+        headerName: "Action",
+        cellRenderer: (params) => {
+          const button = document.createElement("button");
+          button.innerText = "Set Year to 2006";
+          button.addEventListener("click", () => {
+            params.node.setData({ ...params.data, year: 2006 });
+          });
+          return button;
+        },
+      },
     ]);
+
     const gridApi = shallowRef();
     const defaultColDef = ref({
       flex: 1,
